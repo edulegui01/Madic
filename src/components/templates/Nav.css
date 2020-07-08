@@ -1,0 +1,24 @@
+.sidebar{
+    width: 15%;
+    background-color:rgb(44, 62, 80);
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.link{
+   
+    padding: 10px;
+  border-bottom: 1px solid #daf1ff;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  color: white;
+}
+
+.link:hover{
+    background-color: white;
+    color: rgb(44, 62, 80);
+}
