@@ -100,7 +100,7 @@ class Products extends React.Component{
             }
         }
 
-        const res = await fetch(`${baseUrl}/${productos.id}`,config)
+        await fetch(`${baseUrl}/${productos.id}`,config)
 
         const list = this.getUpdateList(productos,false)
         this.setState({list})
@@ -108,9 +108,9 @@ class Products extends React.Component{
     
     render(){
         return(
-            <div className="home">
+        <div className="home">
             <Nav></Nav>
-            <div style={{display:'flex',flexDirection:'column',width:'100%'}}>
+            <div style={{display:'flex',flexDirection:'column',width:'100%',minHeight:'100vh'}}>
                 <Header datos={header}></Header>
                 <div className="productos">
                     <div className="form">
@@ -233,7 +233,7 @@ class Products extends React.Component{
                             </div>
                         </div>
                     </div>
-                    <table className="table mt-4">
+                    <table className="table table-responsive-sm  mt-4">
                         <thead>
                             <tr>
                                 <th>Nombre</th>

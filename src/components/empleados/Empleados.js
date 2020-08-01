@@ -90,7 +90,7 @@ class Empleados extends React.Component{
     }
     
 
-     remove = async (empleados) =>{
+    remove = async (empleados) =>{
         let config ={
             method:'DELETE',
             headers:{
@@ -99,7 +99,7 @@ class Empleados extends React.Component{
             }
         }
 
-        const res = await fetch(`${baseUrl}/${empleados.id_empleado}`,config)
+        await fetch(`${baseUrl}/${empleados.id_empleado}`,config)
 
         const list = this.getUpdateList(empleados,false)
         this.setState({list})
@@ -111,8 +111,8 @@ class Empleados extends React.Component{
             <Nav></Nav>
             <div style={{display:'flex',flexDirection:'column',width:'100%'}}>
                 <Header datos={header}></Header>
-                <div className="productos">
-                    <div className="form">
+                <div className="empledos">
+                    <div className="form col-12">
                         <div className="row">
                             <div className="col-12 col-md-4 pl-4 pt-2">
                                 <div className="form-group">
@@ -218,7 +218,7 @@ class Empleados extends React.Component{
 
                             </div>
 
-                            <div className="col-12 col-md-3 pr-4">
+                            <div className="col-12 col-md-3 pl-4">
                                 <div className="form-group">
                                     <label>Fecha de Ingreso</label>
                                     <input
@@ -234,7 +234,7 @@ class Empleados extends React.Component{
 
                             </div>
 
-                            <div className="col-12 col-md-3 pr-4">
+                            <div className="col-12 col-md-3">
                                 <div className="form-group">
                                     <label>Fecha de Salida</label>
                                     <input
@@ -249,7 +249,7 @@ class Empleados extends React.Component{
 
                             </div>
 
-                            <div className="col-12 col-md-3 pr-4">
+                            <div className="col-12 col-md-3">
                                 <div className="form-group">
                                     <label>Email</label>
                                     <input
@@ -274,6 +274,7 @@ class Empleados extends React.Component{
                                         name="rol"
                                         value={this.state.empleados.rol}
                                         onChange={e => this.updateField(e)}
+                                        placeholder="Escriba el rol"
                                     />
                                 </div>
                                 
@@ -294,21 +295,21 @@ class Empleados extends React.Component{
                             </div>
                         </div>
                     </div>
-                    <table className="table mt-4">
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
+                    <table className="tabla table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl mt-4 " >
+                        <thead className="thead">
+                            <tr style={{textAlign:'center'}}>
+                                <th>Nombre y Apellido</th>
+                                {/* <th>Apellido</th> */}
                                 <th>Cédula</th>
-                                <th>Fecha de Nacimiento</th>
+                                {/* <th>Fecha de Nacimiento</th> */}
                                 <th>Teléfono</th>
                                 <th>Domicilio</th>
                                 <th>Localidad</th>
                                 <th>Fecha de Ingreso</th>
                                 <th>Fecha de Salida</th>
-                                <th>Email</th>
+                                <th >Email</th>
                                 <th>Rol</th>
-                                <th>Acciones</th>
+                                <th >Acciones</th>
                             </tr>
                         </thead>
                         <tbody>

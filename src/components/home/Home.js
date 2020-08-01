@@ -7,7 +7,7 @@ icon:'fas fa-home pr-1'}
 
 const Home = () =>{
     return(
-        <div className="home" style={{height:'1000%'}}>
+        <div className="home" style={{minHeight:'100vh'}}>
             <Nav></Nav>
             <div style={{display:'flex',flexDirection:'column',width:'100%'}}>
                 <Header datos={header}></Header>

@@ -1,4 +1,4 @@
-.productos{
+.empledos{
     background-color: white;
     margin: 10px 10px 0 10px;
     -webkit-box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
@@ -6,3 +6,32 @@
     box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
     border-radius: 5px;
 }
+
+.tabla{
+    border-collapse: collapse;
+    min-width: 100%;
+}
+
+.tabla tr{
+    border-top: 2px solid;
+    border-color: lightgrey;
+    
+}
+.tabla td{
+    padding: 9px;
+    
+}
+.tabla th{
+    padding:5px;
+}
+
+
+
+.tabla td:nth-child(10){
+    width: 110px;
+    
+}
+
+
+
+
